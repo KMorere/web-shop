@@ -1,0 +1,34 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Numero uno",
+            "desc": "Trallalero Trallala",
+            "price": 19.99
+        },
+        {
+            "id": 2,
+            "name": "Numero dos",
+            "desc": "Bombardiro Crocodilo",
+            "price": 17.99
+        },
+        {
+            "id": 3,
+            "name": "Numero tres",
+            "desc": "Capuccini Assassino",
+            "price": 16.99
+        },
+        {
+            "id": 4,
+            "name": "Numero quatro",
+            "desc": "Muda Muda Muda Muda",
+            "price": 12.99
+        },
+        {
+            "id": 5,
+            "name": "Numero cinquo",
+            "desc": "Ora Ora Ora Ora",
+            "price": 13.99
+        }
+    ]
+}
