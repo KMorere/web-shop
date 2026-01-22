@@ -142,7 +142,7 @@ header button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    position: relative;
 
     width: 192px;
     height: 256px;
@@ -150,7 +150,12 @@ header button:hover {
 }
 
 .card button>img {
-    align-items: center;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.card button:hover {
+    transform: scale(1.05)
 }
 
 .line {
@@ -168,6 +173,29 @@ header button:hover {
 
 .cart_container h4 {
     margin-top: 0;
+}
+
+.cart_product {
+    display: flex;
+    border-style: solid;
+    border-radius: 8px;
+    border-width: thin;
+
+    margin-top: 16px;
+    column-gap: 10px;
+    padding: 8px;
+}
+
+.cart_container img {
+    width: 50px;
+    height: 50px;
+
+    border-style: solid;
+    background-color: antiquewhite;
+}
+
+.cart_product div {
+    padding-top: 0px;
 }
 
 #cart {
