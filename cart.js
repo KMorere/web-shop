@@ -99,11 +99,39 @@ function createCartElement(item, amount) {
             let image = document.createElement("img");
             image.src = product.image;
 
+            let price = document.createElement("div");
+            price.innerHTML = getPrice(getProductByName(item), amount) + "€";
+            price.className = "product_price";
+
             productContainer.append(image);
             productContainer.append(productDiv);
+            productContainer.append(price);
             container.append(productContainer);
         }
     });
+}
+
+/**
+ * Get the total price of a product in the cart.
+ * @param {*} item Product.
+ * @param {Number} amount The amount of the same product.
+ * @returns 
+ */
+function getPrice(item, amount) {
+    return item.price * amount;
+}
+
+/**
+ * Get the total cost of the shopping cart.
+ * @returns The total cost of products.
+ */
+function getTotal() {
+    let total = 0;
+    products.forEach(product => {
+        total += product.price;
+    });
+
+    return total;
 }
 
 /**
