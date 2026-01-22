@@ -1,0 +1,131 @@
+body {
+    background-color: white;
+}
+
+header {
+    align-items: center;
+    display: flex;
+
+    background-color: aliceblue;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    border-color: black;
+    padding: 8px;
+    
+}
+
+header h1 {
+    margin: auto;
+
+    color: black;
+}
+
+.title_desc {
+    margin-top: 32px;
+    margin-left: 350px;
+
+    border-style: solid;
+    border-width: thin;
+    border-radius: 8px;
+
+    padding-left: 16px;
+    width: 1000px;
+}
+
+.grid {
+    display: flex;
+    margin-top: 32px;
+}
+
+.filter {
+    position: absolute;
+    width: 250px;
+    height: auto;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 8px;
+    padding-left: 16px;
+}
+
+.multiselect {
+    width: auto;
+}
+
+.selectBox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 25px;
+}
+
+.selectBox select {
+    width: 100%;
+    font-weight: bold;
+    border-style: none;
+    color: #1e90ff;
+    transition: 0.4s;
+}
+
+.selectBox select,
+::picker(select) {
+    appearance: base-select;
+}
+.selectBox select::picker-icon {
+    transition: 0.4s rotate;
+}
+.selectBox select:open::picker-icon {
+    rotate: 180deg;
+}
+
+.overSelect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+#checkboxes {
+    display: none;
+    border: 1px solid #dadada;
+}
+#checkboxes label {
+    display: block;
+}
+#checkboxes label:hover {
+    background-color: #1e90ff;
+}
+#prices {
+    display: flex;
+}
+#prices input {
+    width: 25px;
+}
+
+.container {
+    margin-left: 350px;
+    border-style: solid;
+    border-width: thin;
+    list-style-type: none;
+    border-radius: 8px;
+    padding: 16px;
+    
+    display: grid;
+    grid-template-columns: repeat(4, 192px);
+    column-gap: 64px;
+    justify-content: space-evenly;
+    overflow: hidden;
+}
+
+.card p {
+    text-align: center;
+    margin-top: 8px;
+}
+
+.card div, button {
+    background-color: slategray;
+
+    width: 192px;
+    height: 256px;
+    border-radius: 8px;
+}
