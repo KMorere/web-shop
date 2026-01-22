@@ -9,7 +9,7 @@ function loadCart() {
     let cart = localStorage.getItem("cart_products");
     console.log("Loaded : ", cart);
 
-    if (document.getElementById("cart")) {
+    if (document.getElementById("cart") && document.getElementById("order_button")) {
         if (cart === null) {
             document.getElementById("order_button").style.display = "none";
             document.getElementById("cart_empty_text").style.display = "block";
@@ -61,6 +61,11 @@ if (cartElem !== null) {
     });
 }
 
+function setOrder() {
+    localStorage.clear();
+    location.reload();
+}
+
 /**
  * Store a product in the local storage.
  * @param {String} item Value to store.
@@ -82,12 +87,21 @@ function addToCart(item) {
  */
 function createCartElement(item, amount) {
     let containers = document.querySelectorAll("#cart_container");
-    console.log(containers);
     containers.forEach(container => {
         if (container) {
-            let product = document.createElement("div");
-            product.innerHTML = amount + "x " + item;
-            container.append(product);
+            let product = getProductByName(item);
+            let productContainer = document.createElement("div");
+            productContainer.className = "cart_product";
+
+            let productDiv = document.createElement("div");
+            productDiv.innerHTML = amount + "x " + item;
+
+            let image = document.createElement("img");
+            image.src = product.image;
+
+            productContainer.append(image);
+            productContainer.append(productDiv);
+            container.append(productContainer);
         }
     });
 }
@@ -100,4 +114,27 @@ function createCartElement(item, amount) {
  */
 function getOccurence(array, value) {
     return array.filter((v) => (v === value)).length;
+}
+
+function getProductByID(id) {
+    let products = JSON.parse(localStorage.getItem("products"));
+
+    products.forEach((product) => {
+        if (product.id === id) {
+            console.log(product);
+            return product;
+        }
+    });
+}
+
+function getProductByName(name) {
+    let products = JSON.parse(localStorage.getItem("products"));
+    let prod;
+
+    products.forEach((product) => {
+        if (product.name === name) {
+            prod = product;
+        }
+    });
+    return prod;
 }

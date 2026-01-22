@@ -1,5 +1,11 @@
 body {
     background-color: white;
+    margin: auto;
+}
+
+.content {
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 header {
@@ -33,8 +39,23 @@ header h1 {
     padding: 16px;
 }
 
+.cart_product {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    column-gap: 10px;
+}
+
 .container h4 {
     margin-top: 0;
+}
+
+.container img {
+    width: 50px;
+    height: 50px;
+
+    border-style: solid;
+    background-color: antiquewhite;
 }
 
 #cart {
@@ -85,4 +106,8 @@ header h1 {
     z-index: 10;
     right: 0;
     top: 0;
+}
+
+#order_button {
+    margin: 16px;
 }
