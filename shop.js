@@ -15,6 +15,8 @@ function getProducts() {
     return response.json();
 }).then(data => {
     createProducts(data);
+    localStorage.removeItem("products");
+    localStorage.setItem("products", JSON.stringify(products));
     
     console.log("Loaded :", data);
 }).catch(error => {
@@ -35,14 +37,18 @@ function createProducts(data) {
         const itemDiv = document.createElement("div");
         itemDiv.className = "card";
 
-        const image = document.createElement("button");
-        image.addEventListener("click", function() {addProduct(product)})
+        const button = document.createElement("button");
+        button.addEventListener("click", function() {addProduct(product)})
+
+        let image = document.createElement("img");
+        image.src = "./Resources/Burger_King_foot_lettuce.jpg"
 
         const title = document.createElement("p");
         title.className = "name";
         title.textContent = product.desc;
 
-        itemDiv.appendChild(image);
+        button.append(image);
+        itemDiv.appendChild(button);
         itemDiv.appendChild(title);
 
         container.appendChild(itemDiv);
@@ -116,7 +122,6 @@ if (cartElem !== null) {
  */
 function createCartElement(item, amount) {
     let containers = document.querySelectorAll("#cart_container");
-    console.log(containers);
     containers.forEach(container => {
         if (container) {
             let product = document.createElement("div");

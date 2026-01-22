@@ -139,10 +139,18 @@ header button:hover {
 
 .card div, .card button {
     background-color: slategray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 
     width: 192px;
     height: 256px;
     border-radius: 8px;
+}
+
+.card button>img {
+    align-items: center;
 }
 
 .line {
