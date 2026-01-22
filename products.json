@@ -54,7 +54,7 @@
             "name": "Numero ocho",
             "desc": "Quieres",
             "price": 10.99,
-            "image": "./Resources/no-photos.png"
+            "image": "./Resources/Quieres_Thumbnail.png"
         },
         {
             "id": 9,
