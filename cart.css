@@ -1,0 +1,88 @@
+body {
+    background-color: white;
+}
+
+header {
+    align-items: center;
+    display: flex;
+
+    background-color: aliceblue;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    border-color: black;
+    padding: 8px;
+    
+}
+
+header h1 {
+    margin: auto;
+
+    color: black;
+}
+
+.line {
+    border-bottom: solid;
+    border-width: thin;
+}
+
+.container {
+    margin-top: 32px;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.container h4 {
+    margin-top: 0;
+}
+
+#cart {
+    position: fixed;
+    display: none;
+    background-color: rgb(255, 255, 255, 1);
+    width: 350px;
+    height: 100%;
+    z-index: 11;
+    right: 0;
+    top: 0;
+    padding: 16px;
+}
+
+#cart.open {
+    animation-name: translate;
+    animation-duration: 0.3s;
+}
+
+#cart.close {
+    animation-name: translateRev;
+    animation-duration: 0.2s;
+}
+
+@keyframes translate {
+    from { width: 0px; }
+    to { width: 350px; }
+}
+
+@keyframes translateRev {
+    from { width: 350px; }
+    to { width: 0px; }
+}
+
+#cart button {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: -25px;
+}
+
+#overlay {
+    position: fixed;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    right: 0;
+    top: 0;
+}
