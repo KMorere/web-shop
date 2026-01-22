@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cart</title>
+	<link rel="stylesheet" href="../UI/cart.css">
+	
+</head>
+<body>
+    <header>
+        <img src="../Resources/home.png" height="32"></img>
+        <h1>Title</h1>
+        <button type="button" onclick="getCart()">
+            <img  src="../Resources/shopping-cart.png" height="32"></img></button>
+    </header>
+
+    <div class="content">
+        <div>
+            <p>Items in cart :</p>
+            <div class="line"></div>
+            <div class="container" id="cart_container">
+                <h4 id="cart_empty_text">Your shopping cart is empty, make sure to add products.</h4>
+            </div>
+
+            <button id="order_button" type="button" onclick="setOrder()">Take order</button>
+        </div>
+
+        <div id="cart">
+            <div id="cart_content">
+                <button type="button" width="32" height="32" onclick="getCart()">
+                    <img>X</img>
+                </button>
+                
+                <p>Items in cart :</p>
+                <div class="line"></div>
+                <div class="container" id="cart_container">
+                </div>
+            </div>
+        </div>
+        <div id="overlay"></div>
+    </div>
+
+    <script src="../Script/cart.js">
+    </script>
+</body>
+</html>
