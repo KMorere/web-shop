@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Shop</title>
+	<link rel="stylesheet" href="shop.css">
+	
+</head>
+<body>
+    <header>
+        <img src="/Resources/home.png" height="32"></img>
+        <h1>Title</h1>
+    </header>
+
+    <div class="title_desc">
+        <h2>Title</h2>
+        <h4>Sub-text for a descriptive description describing elements.</h4>
+    </div>
+    
+    <div class="grid">
+        <div class="filter">
+            <form>
+                <div class="multiselect">
+                    <div class="selectBox" onclick="showCheckboxes()">
+                        <select>
+                            <option>Filter by :</option>
+                        </select>
+                        <div class="overSelect"></div>
+                    </div>
+                    <div id="checkboxes">
+                        <div id="prices">
+                            Price
+                            <input type="text" id="priceMin" autocomplete="off" onkeyup="filterPriceUnder()" placeholder="Min">
+                            -
+                            <input type="text" id="priceMax" autocomplete="off" onkeyup="filterPriceAbove()" placeholder="Max">
+                        </div>
+                        <label for="one"><input type="checkbox" id="one" onclick="filterProducts()" />First checkbox</label>
+                        <label for="two"><input type="checkbox" id="two" />Second checkbox</label>
+                        <label for="three"><input type="checkbox" id="three" />Third checkbox</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="container" id="container">
+    </div>
+
+    </div>
+
+    <script src="shop.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>
