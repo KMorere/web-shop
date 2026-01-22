@@ -4,31 +4,64 @@
             "id": 1,
             "name": "Numero uno",
             "desc": "Trallalero Trallala",
-            "price": 19.99
+            "price": 19.99,
+            "image": "./Resources/no-photos.png"
         },
         {
             "id": 2,
             "name": "Numero dos",
             "desc": "Bombardiro Crocodilo",
-            "price": 17.99
+            "price": 17.99,
+            "image": "./Resources/no-photos.png"
         },
         {
             "id": 3,
             "name": "Numero tres",
             "desc": "Capuccini Assassino",
-            "price": 16.99
+            "price": 16.99,
+            "image": "./Resources/no-photos.png"
         },
         {
             "id": 4,
             "name": "Numero quatro",
             "desc": "Muda Muda Muda Muda",
-            "price": 12.99
+            "price": 12.99,
+            "image": "./Resources/no-photos.png"
         },
         {
             "id": 5,
-            "name": "Numero cinquo",
+            "name": "Numero cinco",
             "desc": "Ora Ora Ora Ora",
-            "price": 13.99
+            "price": 13.99,
+            "image": "./Resources/no-photos.png"
+        },
+        {
+            "id": 6,
+            "name": "Numero seis",
+            "desc": "Skibidi toilet",
+            "price": 14.99,
+            "image": "./Resources/no-photos.png"
+        },
+        {
+            "id": 7,
+            "name": "Numero siete",
+            "desc": "Quoicoubeh apagnan",
+            "price": 11.99,
+            "image": "./Resources/no-photos.png"
+        },
+        {
+            "id": 8,
+            "name": "Numero ocho",
+            "desc": "Quieres",
+            "price": 10.99,
+            "image": "./Resources/no-photos.png"
+        },
+        {
+            "id": 9,
+            "name": "Number fifteen",
+            "desc": "Number fifteen, burger king foot lettuce, the last thing you'd want in your burger king burger is someone else's foot fungus",
+            "price": 15.00,
+            "image": "./Resources/Burger_King_foot_lettuce.jpg"
         }
     ]
 }
