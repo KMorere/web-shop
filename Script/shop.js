@@ -34,22 +34,26 @@ function createProducts(data) {
     const datas = data.products;
 
     datas.forEach((product, index) => {
-        const itemDiv = document.createElement("div");
+        let itemDiv = document.createElement("div");
         itemDiv.className = "card";
 
-        const button = document.createElement("button");
+        let button = document.createElement("button");
         button.addEventListener("click", function() {addProduct(product)})
 
         let image = document.createElement("img");
         image.src = product.image;
 
-        const title = document.createElement("p");
+        let title = document.createElement("p");
         title.className = "name";
         title.textContent = product.desc;
+
+        let price = document.createElement("p");
+        price.innerHTML = product.price + "€";
 
         button.append(image);
         itemDiv.appendChild(button);
         itemDiv.appendChild(title);
+        itemDiv.appendChild(price);
 
         container.appendChild(itemDiv);
         products.push(product);
@@ -171,10 +175,10 @@ function showCheckboxes() {
     }
 }
 
-function filterProducts() {
+function filterByImage() {
     let items = document.getElementById("container").children;
     products.forEach((product, i) => {
-        if (product.price > 15) {
+        if (product.image === "../Resources/no-photos.png") {
             if (document.getElementById("one").checked)
                 items[i].style.display = "none";
             else
@@ -204,7 +208,7 @@ function filterPriceUnder() {
  */
 function filterPriceAbove() {
     max = document.getElementById("priceMax").value;
-    if (max < 0 || max < min) return;
+    if (max <= 0 || max < min) return;
 
     let items = document.getElementById("container").children;
     products.forEach((product, i) => {
